@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel=" stylesheet" href="estudos.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detran</title>
+</head>
+
+<body>
+    <br>
+    <h1><strong>detran</strong></h1></br>
+    qual a sua velocidade : <input id='velo' type="number"> km.h
+    <br><button onmouseup="iniciar()">analisar</button></br>
+    <div id="a">resultado</div>
+</body>
+<script>
+    var a = document.querySelector('#a')
+    var velosi = document.querySelector('#velo');
+    //calculo
+    function iniciar() {
+        var velosidade = Number(velosi.value)
+        if (velosidade <60) {
+            a.innerHTML = ' correto'
+        } else {
+            a.innerHTML = 'limite utrapasado, multado !';
+        }
+    }
+
+</script>
+
+</html>
