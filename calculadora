@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="calculadora.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+
+<body>
+    <div id="botoes">
+        <div id="visor">0</div>
+
+        <div class="botoes-linha">
+            <button mouseup='botao(1)' class="a1">1</button>
+            <button mouseup='botao(2)' class="a2">2</button>
+            <button mouseup='botao(3)' class="a3"> 3</button>
+            <button mouseup="" class="soma">+</button>
+        </div>
+
+        <div class="botoes-linha">
+            <button mouseup='botao(4)' class="a4">4</button>
+            <button mouseup='botao(5)' class="a5">5 </button>
+            <button mouseup='botao(6)' class="a6">6</button>
+            <button mouseup="" class="menos">-</button>
+        </div>
+
+        <div class="botoes-linha">
+            <button mouseup='botao(7)' class="a7">7</button>
+            <button mouseup='botao(8)' class="a8">8</button>
+            <button mouseup='botao(9)' class="a9">9</button>
+            <button mouseup="" class="veses">x</button>
+        </div>
+
+        <div class="botoes-linha">
+            <button mouseup='botao(0)' class="a0">0</button>
+            <button mouseup="" class="virgula">,</button>
+            <button mouseup="" class="divisao">/</button>
+            <button mouseup='calcular()' id="in">=</button>
+        </div>
+
+
+
+    </div>
+    <script>
+        var resultado = 0;
+
+        const visor = document.querySelector('#visor');
+        visor.innerText = resultado;
+
+        function atualizaVisor(novoValor) {
+            visor.innerText = novoValor;
+        }
+
+        function botao(num) {
+            operacao += num;
+            atualizaVisor(operacao)
+        }
+    </script>
+</body>
+
+</html>
